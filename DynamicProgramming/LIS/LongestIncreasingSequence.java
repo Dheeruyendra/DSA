@@ -1,5 +1,6 @@
 class Solution {
- 
+     
+    
     // prev = prevIndex prev = -1 shows we haven't choosen any element yet.
      int topDownDFS(int[] nums, int i, int prev, int[][] dp){
              if(i == nums.length)return 0;
@@ -19,7 +20,7 @@ class Solution {
  
            return topDownDFS(nums, 0, -1, dp);
      }
- 
+     //TC =>O(N^2) 
      int bottomUp(int[] nums){
             int n = nums.length;
             int[] dp = new int[n];
