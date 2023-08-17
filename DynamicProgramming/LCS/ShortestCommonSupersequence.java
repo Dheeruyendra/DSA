@@ -1,7 +1,8 @@
 package DynamicProgramming.LCS;
 
 public class ShortestCommonSupersequence {
-
+/* https://leetcode.com/problems/shortest-common-supersequence/
+ */
         //TC =>O(N*M) SC =>O(N*M)
         public String shortestCommonSupersequence(String str1, String str2) {
             int n = str1.length();
