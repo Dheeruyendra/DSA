@@ -1,8 +1,10 @@
-//package Greedy;
+package Greedy;
+//Problem Link: https://cses.fi/problemset/task/1621
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,9 +21,27 @@ public class DistinctNumbers {
         for(int i=0; i<size; i++){
             numbers[i] = Integer.parseInt(nums[i]);
          }
-          
+         
+         int res1 = usingSet(numbers);  //Result: Accepted
+        // int res2 = usingSorting(numbers); Result: TLE 
+         System.out.println(res1);
+
+     }
+     //TC =>O(N) SC =>O(N)
+     static int usingSet(int[] nums){
          Set<Integer> unique = new HashSet<>();
-         for(int num : numbers)unique.add(num);
-         System.out.println(unique.size());
+         for(int num : nums)unique.add(num);
+         return unique.size();
+     }
+    //TC =>O(NlogN) SC =>(1) 
+    //TLE on CSES Judge
+     static int usingSorting(int[] nums){
+        Arrays.sort(nums);
+        int count = 1;
+        int n = nums.length;
+        for(int i=1; i<n; i++){
+            if(nums[i] != nums[i-1])count+=1;
+        }
+        return count;
      }
 }
