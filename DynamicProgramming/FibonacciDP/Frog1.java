@@ -9,9 +9,10 @@ class Frog1{
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] jumps = new int[n];
-        for(int is=0; i<n; i++){
+        for(int i=0; i<n; i++){
             jumps[i] = in.nextInt();
         }
+        in.close();
 
         int[] dp = new int[n];
         dp[0] = 0;

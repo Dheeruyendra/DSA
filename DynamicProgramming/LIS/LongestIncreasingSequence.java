@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+class LongestIncreasingSequence {
      
     
     // prev = prevIndex prev = -1 shows we haven't choosen any element yet.

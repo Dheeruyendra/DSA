@@ -46,7 +46,7 @@ public class BFS {
         }
     }
 
-    static void BFS(List<List<Integer>> adj, int s, int e) {
+    static void bfs(List<List<Integer>> adj, int s, int e) {
         int[] prev = solve(adj, s);
         reconstructPath(prev, s, e);
     }
@@ -70,8 +70,9 @@ public class BFS {
             int n2 = in.nextInt();
 
             adj.get(n1).add(n2);
-            if (n1 != n2) adj.get(n2).add(n1);
+            adj.get(n2).add(n1);
         }
-        BFS(adj, src, end);
+        in.close();
+        bfs(adj, src, end);
     }
 }
