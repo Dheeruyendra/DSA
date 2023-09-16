@@ -18,11 +18,11 @@ public class BFS {
                      int curr = q.poll();
     
                      for(int next : adjList.get(curr)){
-                           if(!visited[next]){
-                               visited[next] = true;
-                               dist[next] = dist[curr]+1;
-                               path[next] = curr;
-                               q.add(next); 
+                         if(!visited[next]){
+                            visited[next] = true;
+                            dist[next] = dist[curr]+1;
+                            path[next] = curr;
+                            q.add(next); 
                            }
                      }
                    }         
