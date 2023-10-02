@@ -3,7 +3,7 @@ package Sorting;
 import java.util.Scanner;
 
 public class InsertionSort {
-
+   //TC => O(n^2) SC => O(1)
     static void insertionSort(int[] arr){
            int i = 1;
            int n = arr.length;
@@ -16,6 +16,7 @@ public class InsertionSort {
                 }
                arr[j+1] = key; 
            }
+           i+=1;
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class TopologicalSortDFS {
+    //TC => O(V+E) SC => O(V)
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) 
     {   int n = adj.size();
         boolean[] visited = new boolean[n];
