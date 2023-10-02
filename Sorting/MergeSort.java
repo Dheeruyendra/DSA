@@ -1,7 +1,7 @@
 package Sorting;
 import java.util.Scanner;
 public class MergeSort {
-       //TC =>O(NlogN) SC =>O(N)
+       //TC =>O(NlogN) SC =>O(N){stable sorting alogrithm}
         static void merge(int[] arr, int l, int mid, int r){
                int n1 = mid-l+1;
                int n2 = r-mid;
