@@ -1,5 +1,5 @@
 package Trees;
-
+//TC =>O(N) where N is the no of node
 public class InorderTraversal {
      ArrayList<Integer> inorderTraversal(TreeNode root){
         ArrayList<Integer> res = new ArrayList<>();
